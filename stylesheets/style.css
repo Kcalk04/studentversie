@@ -31,6 +31,9 @@
     padding: 15px;
     font-size: 20px;
 }
+.profile-content__category--personalInfo {
+    font-size: 20px;
+}
 
 .profile-content__category-title {
     color: rgba(39, 140, 39, 0.96);
@@ -69,6 +72,41 @@
     font-size: 14px;
 }
 
+.cookie-consent-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: block; /* Hidden by default */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .cookie-consent-popup p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .cookie-consent-popup button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cookie-consent-popup button:hover {
+    background-color: #45a049;
+  }
+
+  .hide { display: none; }
+    
+  .show { display: block; }
+  
 @media only screen and (min-width: 800px) {
 
     .page {
