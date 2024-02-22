@@ -98,10 +98,44 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+  .Cookie--Accept {
+    background-color: #d5f5d5;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.Cookie--Reject {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
   
   .cookie-consent-popup button:hover {
     background-color: #45a049;
   }
+  
+  .defaultSpacing {
+    margin-top: 15px;
+  }
+
+  .centration {
+    text-align: center;
+  }
+
+  .buttonMargin {
+    margin-top: 15px;
+  }
+  .notes {
+    font-size: 10px;
+  }
+
+  .contactform-content__category-title {
+    color: rgba(39, 140, 39, 0.96);
+    font-size: 45px;
+    text-align: center;
+}
 
   .hide { display: none; }
     

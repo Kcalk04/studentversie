@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>CV Kiran Kok</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"
+</head>
+<body>
+
+    <div>
+        <div class="profile-content__category">
+            <h3 class="contactform-content__category-title">Contact</h3>
+            <hr>
+        </div>
+        <form class="centration" novalidate action="http://localhost:3000/form" method="post" class="form-email">
+
+            <label for="email">
+                <span class="defaultSpacing">Emailadres:</span>
+                <br>
+                <input type="email" name="email" id="email" required minlength="8">
+                <span class="error" aria-live="polite"></span>
+            </label>
+        <br>
+            <label class="defaultSpacing" for="phoneNumber">
+                <span class="defaultSpacing">Telefoonnummer: <br></span>
+                <span class="notes">Houdt rekening met dit patroon: 00-00000000</span>
+                <br>
+                <input type="phonenumber" name="phoneNumber" id="phoneNumber" required pattern="^\d{2}-\d{8}$"/>
+                <span class="error" aria-live="polite"></span>
+            </label>
+            <br>
+            <input class="buttonMargin" type="submit" value="Verstuur!">
+        
+        </form>
+    </div>
+
+</body>

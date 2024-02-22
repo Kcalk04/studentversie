@@ -16,10 +16,9 @@ class GDPR {
             this.showStatus();
             this.showContent();
             this.hideGDPR();
+            console.log("clicked accept");
         });
 
-
-//student uitwerking
         let buttonReject = document.querySelector('.gdpr-consent__button--reject');
         buttonReject.addEventListener('click', () => {
             this.cookieStatus('reject');
@@ -27,6 +26,7 @@ class GDPR {
             this.showStatus();
             this.showContent();
             this.hideGDPR();
+            console.log("clicked reject");
         });
 
     }
@@ -64,18 +64,18 @@ class GDPR {
     }
 
     showStatus() {
-        document.getElementById('content-gpdr-consent-status').innerHTML =
+        document.querySelector('.content-gpdr-consent-status').innerHTML =
             this.cookieStatus() == null ? 'Niet gekozen' : this.cookieStatus();
     }
 
     cookieStatus(status) {
 
-        if (status) localStorage.setItem('gdpr-consent-choice', status);
+        if (status) localStorage.setItem('ConsentStatus', status);
 
 //student uitwerking
         
         
-        return localStorage.getItem('gdpr-consent-choice');
+        return localStorage.getItem('ConsentStatus');
     }
 
 //student uitwerking
@@ -87,12 +87,12 @@ class GDPR {
     }
 
     hideGDPR(){
-        document.querySelector(`.gdpr-consent`).classList.add('hide');
-        document.querySelector(`.gdpr-consent`).classList.remove('show');
+        document.querySelector(`.cookieConsentPopup`).classList.add('hide');
+        document.querySelector(`.cookieConsentPopup`).classList.remove('show');
     }
 
     showGDPR(){
-        document.querySelector(`.gdpr-consent`).classList.add('show');
+        document.querySelector(`.cookieConsentPopup`).classList.add('show');
     }
 
 }

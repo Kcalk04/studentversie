@@ -5,17 +5,34 @@
     <title>CV Kiran Kok</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script defer src="gdpr.js"></script>
+    <script defer src="gdpr.js">
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const dialog = document.getElementById('cookieConsentPopup');
+    if (dialog.open) {
+        dialog.focus();
+    }
+  
+    document.querySelector('.Cookie--Accept').addEventListener('click', () => {
+        dialog.close();
+    // Handle consent accept logic here
+    });
+  
+    document.querySelector('.Cookie--Reject').addEventListener('click', () => {
+        dialog.close();
+    // Handle consent reject logic here
+    });
+    });
+    </script>
 
 </head>
 
 <body>
     
-    <div id="cookieConsentPopup" class="cookie-consent-popup">
-        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <dialog open style="width: 400px; height: 300px; margin: 100px;" class="content-gpdr-consent-status">
+        <p>Deze website gebruikt cookies om U te verzekeren van de beste ervaring op onze website.</p>
         <br>
-        <button class="gdpr-consent__button--accept hide">Accept</button> <button class="gdpr-consent__button--reject hide">Reject</button>
-      </div>
+        <button class="Cookie--Accept">Accept</button> <button class="Cookie--Reject">Reject</button>
+    </dialog>
 
     <div class="page">
         <section class="personalia">
@@ -76,7 +93,7 @@
                 </div>
 
                 <div class="profile-content__category">
-                    <h3 class="profile-content__category-title">Persoonsinformatie</h3>
+                    <h3 class="profile-content__category-title">Informatie</h3>
                     <hr>
                 </div>
 
