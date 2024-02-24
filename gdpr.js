@@ -1,8 +1,6 @@
 class GDPR {
 
     constructor() {
-        this.showStatus();
-        this.showContent();
         this.bindEvents();
         if(this.cookieStatus() !== 'accept') this.showGDPR();
     }

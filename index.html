@@ -5,30 +5,11 @@
     <title>CV Kiran Kok</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script defer src="gdpr.js">
-        document.addEventListener('DOMContentLoaded', (event) => {
-    const dialog = document.getElementById('cookieConsentPopup');
-    if (dialog.open) {
-        dialog.focus();
-    }
-  
-    document.querySelector('.Cookie--Accept').addEventListener('click', () => {
-        dialog.close();
-    // Handle consent accept logic here
-    });
-  
-    document.querySelector('.Cookie--Reject').addEventListener('click', () => {
-        dialog.close();
-    // Handle consent reject logic here
-    });
-    });
-    </script>
+    <script defer src="gdpr.js"></script>
 
 </head>
-
 <body>
-    
-    <div class="dialog-backdrop"></div>
+    <div class="Header"><a class="headerItem" href="ContactForm.html">Contact</a> <a class="headerItem" href="index.html">Curriculum Vitae</a></div>
     <dialog id="gdprDialog" class="cookieConsentPopup">
         <h2>GDPR Consent</h2>
         <p>We use cookies to personalize content and ads, to provide social media features, and to analyze our traffic.</p>
