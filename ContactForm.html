@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>CV Kiran Kok</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
+
 <body>
-    <div class="Header"><a class="headerItem" href="index.html">Curriculum Vitae</a> <a class="headerItem" href="ContactForm.html">Contact</a></div>
+    <div class="Header"><a class="headerItem" href="index.html">Curriculum V</a> <a class="headerItem"
+            href="ContactForm.html">Contact</a></div>
     <br>
-    <div align-content="center">
-        <form class="centration" action="http://localhost:3000/form" method="post" class="form-email">
-            <label for="voornaam">
-                <span class="defaultSpacing">voornaam:</span>
-                <input type="voornaam" name="voornaam" id="voornaam" required minlength="3">
-                <span class="error" aria-live="polite"></span>
-            </label>
-            <br>
-            <label for="achternaam">
-                <span class="defaultSpacing">achternaam:</span>
-                <input type="achternaam" name="achternaam" id="achternaam" required minlength="3">
-                <span class="error" aria-live="polite"></span>
-            </label>
-            <br>
-            <label for="email">
-                <span class="defaultSpacing">Emailadres:</span>
-                <input type="email" name="email" id="email" required minlength="8">
-                <span class="error" aria-live="polite"></span>
-            </label>
-        <br>
-            <label class="defaultSpacing" for="phoneNumber">
-                <span class="defaultSpacing">Telefoonnummer: </span>
-                <input type="phonenumber" name="phoneNumber" id="phoneNumber" required pattern="^\d{2}-\d{8}$" value="Houdt rekening met dit patroon: 00-000-000-00" size="37">
-                <span class="error" aria-live="polite"></span>
-            </label>
-            <br>
-            <input class="buttonMargin" type="submit" value="Verstuur!">
-        </form>
-    </div>
+   <div>
+    <section class="contactContainer">
+        <div>
+             <form class="centration" action="http://localhost:3000/form" method="post" class="form-email">
+                <div class="formDivs"></div>
+                <div class="formDivs">
+                    <label for="voornaam">
+                        <input class="formItem" type="voornaam" placeholder="voornaam" name="voornaam" id="voornaam" required minlength="3" size="37">
+                        <span class="error" aria-live="polite"></span>
+                    </label>
+                    <br>
+                    <label for="achternaam">
+                        <input class="formItem" type="achternaam" placeholder="achternaam" name="achternaam" id="achternaam" required minlength="3" size="37">
+                        <span class="error" aria-live="polite"></span>
+                    </label>
+                    <br>
+                    <label for="email">
+                        <input class="formItem" placeholder="Email-adress" type="email" name="email" id="email" required minlength="8" size="37">
+                        <span class="error" aria-live="polite"></span>
+                    </label>
+                    <br>
+                    <label for="phoneNumber">
+                        <input class="formItem" type="phonenumber" name="phoneNumber" id="phoneNumber" required
+                            pattern="^\d{2}-\d{8}$" placeholder="Houdt rekening met dit patroon: 00-000-000-00" size="37">
+                        <span class="error" aria-live="polite"></span>
+                    </label>
+                    <br>
+                    <label for="messageBody">
+                        <input class="formItem" type="messageBody" name="messageBody" id="messageBody" required
+                            pattern="^\d{2}-\d{8}$" placeholder="Vul hier Uw bericht in" size="37">
+                        <span class="error" aria-live="polite"></span>
+                    </label>
+                    <br>
+                    <input class="buttonMargin" type="submit" value="Verstuur!">
+                </div>
+            </form>
+        </div>
+    </section>
+   </div>
 
 </body>
 

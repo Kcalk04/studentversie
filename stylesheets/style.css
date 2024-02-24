@@ -63,6 +63,25 @@
     margin-top: 6px;
 }
 
+.formItem {
+    margin-bottom: 10px;
+    font-weight: bold;
+    flex-direction: row;
+    min-height: 25px;
+    border-color: #45a049;
+    border-radius: 20px;
+}
+.formDivs {
+    width: 50%;
+    align-items: end;
+}
+
+.contactContainer {
+    text-align: center;
+    height: 50%;
+    width: 50%;
+}
+
 .profile-content__period {
     display: none;
 }
@@ -156,11 +175,17 @@
 }
 
 .headerItem {
-    margin: auto;
+    width: 50%;
     padding: 5px;
-    font-size: 50px;
+    font-size: 20px;
     background-color: #d5f5d5;
     border: 10px solid #d5f5d5;
+}
+body {
+    background-color: #d5f5d5;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 .hide { display: none; }
   
@@ -191,6 +216,28 @@
         font-size: 12px;
         color: #5c6166;
         display: block; /* Ensure visibility in desktop layout */
+    }
+
+    .formItem {
+        min-height: 50px;
+    }
+
+    .Header {
+        display: flex;
+        background-color: #45a049;
+        border-bottom: #d5f5d5 0.5px;
+        flex-direction: row;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        height: 20%;
+    }
+    
+    .headerItem {
+        width: 50%;
+        padding: 5px;
+        margin-left: 20px;
+        font-size: 50px;
+        background-color: #45a049;
+        border: 10px solid #d5f5d5;
     }
 
 }
