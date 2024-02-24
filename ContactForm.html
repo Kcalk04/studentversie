@@ -7,38 +7,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
-
-    <div>
-        <div class="profile-content__category">
-            <h3 class="contactform-content__category-title">Contact</h3>
-            <hr>
-        </div>
+    <div class="Header"><a class="headerItem" href="index.html">Curriculum Vitae</a> <a class="headerItem" href="ContactForm.html">Contact</a></div>
+    <br>
+    <div align-content="center">
         <form class="centration" action="http://localhost:3000/form" method="post" class="form-email">
-
             <label for="voornaam">
                 <span class="defaultSpacing">voornaam:</span>
-                <br>
-                <input type="voornaam" name="voornaam" id="voornaam" required minlength="8">
+                <input type="voornaam" name="voornaam" id="voornaam" required minlength="3">
                 <span class="error" aria-live="polite"></span>
             </label>
+            <br>
             <label for="achternaam">
                 <span class="defaultSpacing">achternaam:</span>
-                <br>
-                <input type="achternaam" name="achternaam" id="achternaam" required minlength="8">
+                <input type="achternaam" name="achternaam" id="achternaam" required minlength="3">
                 <span class="error" aria-live="polite"></span>
             </label>
+            <br>
             <label for="email">
                 <span class="defaultSpacing">Emailadres:</span>
-                <br>
                 <input type="email" name="email" id="email" required minlength="8">
                 <span class="error" aria-live="polite"></span>
             </label>
         <br>
             <label class="defaultSpacing" for="phoneNumber">
-                <span class="defaultSpacing">Telefoonnummer: <br></span>
-                <span class="notes">Houdt rekening met dit patroon: 00-00000000</span>
-                <br>
-                <input type="phonenumber" name="phoneNumber" id="phoneNumber" required pattern="^\d{2}-\d{8}$"/>
+                <span class="defaultSpacing">Telefoonnummer: </span>
+                <input type="phonenumber" name="phoneNumber" id="phoneNumber" required pattern="^\d{2}-\d{8}$" value="Houdt rekening met dit patroon: 00-000-000-00" size="37">
                 <span class="error" aria-live="polite"></span>
             </label>
             <br>
