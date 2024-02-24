@@ -4,7 +4,6 @@ class GDPR {
         this.showStatus();
         this.showContent();
         this.bindEvents();
-
         if(this.cookieStatus() !== 'accept') this.showGDPR();
     }
 
@@ -41,49 +40,42 @@ class GDPR {
     }
 
     showContent() {
-        this.resetContent();
-        const status = this.cookieStatus() == null ? 'not-chosen' : this.cookieStatus();
-        const element = document.querySelector(`.content-gdpr-${status}`);
-        element.classList.add('show');
-
+        //this.resetContent();
+        // const status = this.cookieStatus() == null ? 'not-chosen' : this.cookieStatus();
+        // const element = document.querySelector(`.content-gdpr-${status}`);
+        // element.classList.add('show');
     }
 
     resetContent(){
-        const classes = [
-            '.content-gdpr-accept',
+//         const classes = [
+//             '.content-gdpr-accept',
 
-//student uitwerking
-            '.content-gdpr-reject',
+// //student uitwerking
+//             '.content-gdpr-reject',
 
-            '.content-gdpr-not-chosen'];
+//             '.content-gdpr-not-chosen'];
 
-        for(const c of classes){
-            document.querySelector(c).classList.add('hide');
-            document.querySelector(c).classList.remove('show');
-        }
+//         for(const c of classes){
+//             document.querySelector(c).classList.add('hide');
+//             document.querySelector(c).classList.remove('show');
+//         }
     }
 
     showStatus() {
-        document.querySelector('.content-gpdr-consent-status').innerHTML =
-            this.cookieStatus() == null ? 'Niet gekozen' : this.cookieStatus();
+        // document.querySelector('.content-gpdr-consent-status').innerHTML =
+        //     this.cookieStatus() == null ? 'Niet gekozen' : this.cookieStatus();
     }
 
     cookieStatus(status) {
-
         if (status) localStorage.setItem('ConsentStatus', status);
-
-//student uitwerking
-        
-        
         return localStorage.getItem('ConsentStatus');
     }
 
 //student uitwerking
     MetaData(metadata)
     {
-        if (metadata) localStorage.setItem('gdpr-consent-metadata', metadata);
-
-        return localStorage.getItem('gdpr-consent-metadata');
+        if (metadata) localStorage.setItem('metadata', metadata);
+        return localStorage.getItem('metadata');
     }
 
     hideGDPR(){
@@ -93,6 +85,7 @@ class GDPR {
 
     showGDPR(){
         document.querySelector(`.cookieConsentPopup`).classList.add('show');
+        document.querySelector('.dialog-backdrop').style.display = 'block';
     }
 
 }

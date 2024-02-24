@@ -1,4 +1,3 @@
-/*mobile version*/
 
 .page {
     display: flex;
@@ -50,8 +49,6 @@
 }
 
 .profile-content__element--hidden-mobile {
-    display: flex;
-    flex-direction: column;
     display: none;
 }
 
@@ -80,16 +77,22 @@
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    display: block; /* Hidden by default */
-    z-index: 1000; /* Ensure it appears above other content */
-  }
+    display: none; /* Hidden by default */
+    z-index: 1001; /* Above the frosted effect */
+}
+.cookie-consent-popup.show {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
   
-  .cookie-consent-popup p {
+.cookie-consent-popup p {
     margin: 0;
     font-size: 14px;
-  }
-  
-  .cookie-consent-popup button {
+}
+
+.cookie-consent-popup button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -97,49 +100,51 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  .Cookie--Accept {
+.Cookie--Accept, .Cookie--Reject {
     background-color: #d5f5d5;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid gray;
+    display: inline-block; /* Ensure inline display for layout */
 }
 
 .Cookie--Reject {
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid gray;
+    background-color: #f8d7da; /* Different background for reject button */
 }
-  
-  .cookie-consent-popup button:hover {
+
+.cookie-consent-popup button:hover {
     background-color: #45a049;
-  }
-  
-  .defaultSpacing {
-    margin-top: 15px;
-  }
+}
+.cookie-consent-popup {
+    z-index: 2000; 
+}
 
-  .centration {
+.defaultSpacing {
+    margin-top: 15px;
+}
+
+.centration {
     text-align: center;
-  }
+}
 
-  .buttonMargin {
+.buttonMargin {
     margin-top: 15px;
-  }
-  .notes {
+}
+.notes {
     font-size: 10px;
-  }
+}
 
-  .contactform-content__category-title {
+.contactform-content__category-title {
     color: rgba(39, 140, 39, 0.96);
     font-size: 45px;
     text-align: center;
 }
 
-  .hide { display: none; }
-    
-  .show { display: block; }
+.hide { display: none; }
+  
+.show { display: block; }
   
 @media only screen and (min-width: 800px) {
 
@@ -157,28 +162,14 @@
         flex-direction: column;
     }
 
-    /*fix: anders als stipje zichtbaar*/
-    .profile-content__category--hidden-mobile hr{
-        width: 100%;
-    }
-
     .profile-content__element--hidden-mobile {
         display: flex;
-    }
-
-    .profile-content__element-header{
-        display: flex;
-        justify-content: space-between;
     }
 
     .profile-content__period {
         font-size: 12px;
         color: #5c6166;
-        display: flex;
+        display: block; /* Ensure visibility in desktop layout */
     }
 
 }
-
-
-/*student uitwerking*/
-

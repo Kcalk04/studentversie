@@ -28,11 +28,18 @@
 
 <body>
     
-    <dialog open style="width: 400px; height: 300px; margin: 100px;" class="content-gpdr-consent-status">
-        <p>Deze website gebruikt cookies om U te verzekeren van de beste ervaring op onze website.</p>
-        <br>
-        <button class="Cookie--Accept">Accept</button> <button class="Cookie--Reject">Reject</button>
+    <div class="dialog-backdrop"></div>
+    <dialog id="gdprDialog" class="cookieConsentPopup">
+        <h2>GDPR Consent</h2>
+        <p>We use cookies to personalize content and ads, to provide social media features, and to analyze our traffic.</p>
+        <button class="gdpr-consent__button--accept">Accept</button>
+        <button class="gdpr-consent__button--reject">Reject</button>
     </dialog>
+    
+    <!-- <div class="content-gdpr-accept hide">Content for users who accepted the cookies.</div>
+    <div class="content-gdpr-reject hide">Content for users who rejected the cookies.</div>
+    <div class="content-gdpr-not-chosen hide">Content for users who have not yet made a choice.</div> -->
+    <!-- <div class="content-gpdr-consent-status">Consent status: Niet gekozen</div> -->
 
     <div class="page">
         <section class="personalia">
