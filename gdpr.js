@@ -12,8 +12,6 @@ class GDPR {
         buttonAccept.addEventListener('click', () => {
             this.cookieStatus('accept');
             this.MetaData(this.captureDateInformation())
-            this.showStatus();
-            this.showContent();
             this.hideGDPR();
             console.log("clicked accept");
         });
@@ -22,8 +20,6 @@ class GDPR {
         buttonReject.addEventListener('click', () => {
             this.cookieStatus('reject');
             this.MetaData(this.captureDateInformation())
-            this.showStatus();
-            this.showContent();
             this.hideGDPR();
             console.log("clicked reject");
         });
@@ -37,33 +33,6 @@ class GDPR {
         const uren = now.getHours();
         const minuten = now.getMinutes();
         return "Datum: " + dag + "-" + maand + "-" + jaar + " " + "tijd: " + uren + ":" + minuten; 
-    }
-
-    showContent() {
-        //this.resetContent();
-        // const status = this.cookieStatus() == null ? 'not-chosen' : this.cookieStatus();
-        // const element = document.querySelector(`.content-gdpr-${status}`);
-        // element.classList.add('show');
-    }
-
-    resetContent(){
-//         const classes = [
-//             '.content-gdpr-accept',
-
-// //student uitwerking
-//             '.content-gdpr-reject',
-
-//             '.content-gdpr-not-chosen'];
-
-//         for(const c of classes){
-//             document.querySelector(c).classList.add('hide');
-//             document.querySelector(c).classList.remove('show');
-//         }
-    }
-
-    showStatus() {
-        // document.querySelector('.content-gpdr-consent-status').innerHTML =
-        //     this.cookieStatus() == null ? 'Niet gekozen' : this.cookieStatus();
     }
 
     cookieStatus(status) {
