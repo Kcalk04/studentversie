@@ -189,6 +189,11 @@ body {
     width: 100%;
     margin: 0;
 }
+
+textarea {
+    width: 312px;
+    height: 165px;
+}
 .hide { display: none; }
   
 .show { display: block; }

@@ -9,6 +9,9 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6LfHg4ApAAAAAGPJBCsxEPiZaIpSx3Ziewqv-13j" async defer></script>
     <script defer src="captcha.js"></script>
     <script defer src="app.js"></script>
+    <script>function resetForm() {
+        document.getElementById("submit").reset;
+    } </script>
 </head>
 
 <body>
@@ -42,6 +45,10 @@
 
                     </label>
                     <br>
+                    <label for="Subject">
+                        <input class="formItem" type="subject" name="subject" id="subject" required placeholder="Vul het onderwerp in" maxlength="200" size="37">
+                    </label>
+                    <br>
                     <label for="messageBody">
                         <textarea class="formItem" type="messageBody" name="messageBody" id="messageBody" required
                              placeholder="Vul hier Uw bericht in" size="57" height="27"></textarea>
@@ -49,7 +56,7 @@
                     </label>
                     <br>
                     <!-- <div class="g-recaptcha" data-sitekey="6LcbzIApAAAAAPBo7jQGjcSwzWw5_iOZHTsicZG_"></div> -->
-                    <input class="buttonMargin" type="submit" value="Verstuur!">
+                    <input class="buttonMargin" onclick="resetForm()" type="submit" value="Verstuur!">
                 </div>
             </form>
         </div>
