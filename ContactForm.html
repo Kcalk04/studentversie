@@ -6,6 +6,8 @@
     <title>Contact</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/api.js?" async defer></script>
+    <script defer src="captcha.js"></script>
     <script defer src="app.js"></script>
 </head>
 
@@ -16,36 +18,37 @@
    <div>
     <section class="contactContainer">
         <div>
-             <form id="centration" action="http://localhost:3000/send-email" method="post" class="form-email">
+             <form id="centration" action="http://localhost:3001/send-email" method="post" class="form-email">
                 <div class="formDivs"></div>
                 <div class="formDivs">
                     <label for="voornaam">
-                        <input class="formItem" type="voornaam" placeholder="voornaam" name="voornaam" id="voornaam" required minlength="3" size="37">
-                        <span class="error" aria-live="polite"></span>
+                        <input class="formItem" type="voornaam" placeholder="voornaam" name="voornaam" id="voornaam" required minlength="3" maxlength="60" size="37">
+
                     </label>
                     <br>
                     <label for="achternaam">
-                        <input class="formItem" type="achternaam" placeholder="achternaam" name="achternaam" id="achternaam" required minlength="3" size="37">
-                        <span class="error" aria-live="polite"></span>
+                        <input class="formItem" type="achternaam" placeholder="achternaam" name="achternaam" id="achternaam" required minlength="3" maxlength="60" size="37">
+
                     </label>
                     <br>
                     <label for="email">
-                        <input class="formItem" placeholder="Email-adress" type="email" name="email" id="email" required minlength="8" size="37">
-                        <span class="error" aria-live="polite"></span>
+                        <input class="formItem" placeholder="Email-adress" type="email" name="email" id="email" required minlength="8" maxlength="80" size="37">
+
                     </label>
                     <br>
                     <label for="phoneNumber">
                         <input class="formItem" type="phonenumber" name="phoneNumber" id="centration" required
-                            pattern="^\d{2}-\d{8}$" placeholder="Houdt rekening met dit patroon: 00-00000000" size="37">
-                        <span class="error" aria-live="polite"></span>
+                            pattern="^\d{2}-\d{8}$" placeholder="Houdt rekening met dit patroon: 00-00000000" maxlength="20" size="37">
+
                     </label>
                     <br>
                     <label for="messageBody">
-                        <input class="formItem" type="messageBody" name="messageBody" id="centration" required
-                             placeholder="Vul hier Uw bericht in" size="37" height="27">
-                        <span class="error" aria-live="polite"></span>
+                        <textarea class="formItem" type="messageBody" name="messageBody" id="centration" required
+                             placeholder="Vul hier Uw bericht in" size="57" height="27"></textarea>
+
                     </label>
                     <br>
+                    <div class="g-recaptcha" data-sitekey="6LcbzIApAAAAAPBo7jQGjcSwzWw5_iOZHTsicZG_"></div>
                     <input class="buttonMargin" type="submit" value="Verstuur!">
                 </div>
             </form>
