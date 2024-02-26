@@ -1,5 +1,4 @@
 const form = document.querySelector('#submit');
-require('dotenv').config();
 
 // Koppel er een event listener aan
 form.addEventListener('submit', onSubmit);
@@ -15,10 +14,15 @@ function onSubmit(e) {
                 // Verstuur het eerst naar jouw eigen server.
                 // Voor dit voorbeeld is een nodejs server bijgevoegd (Zie map server).
                 // Je kunt dit voor je showcase ook aanpassen door je eigen server project (bijv. ASP.NET) te gebruiken.
-                const response = await fetch('http://localhost:3000/captcha', {
+                const response = await fetch('http://localhost:3001/send-email', {
                     method: "POST",
                     body: JSON.stringify({
-                        response: grecaptcha.getResponse()
+                        token: token,
+                        voornaam: document.getElementById('voornaam').value,
+                        achternaam: document.getElementById('achternaam').value,
+                        email: document.getElementById('email').value,
+                        phoneNumber: document.getElementById('phoneNumber').value,
+                        messageBody: document.getElementById('messageBody').value
                     }),
                     headers: {
                         'Accept': 'application/json',
