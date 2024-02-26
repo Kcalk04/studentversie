@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CV Kiran Kok</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script defer src="app.js"></script>
 </head>
 
 <body>
@@ -15,21 +16,21 @@
    <div>
     <section class="contactContainer">
         <div>
-             <form id="centration" action="http://localhost:3000/form" method="post" class="form-email">
+             <form id="centration" action="http://localhost:3000/send-email" method="post" class="form-email">
                 <div class="formDivs"></div>
                 <div class="formDivs">
                     <label for="voornaam">
-                        <input class="formItem" type="voornaam" placeholder="voornaam" name="voornaam" id="centration" required minlength="3" size="37">
+                        <input class="formItem" type="voornaam" placeholder="voornaam" name="voornaam" id="voornaam" required minlength="3" size="37">
                         <span class="error" aria-live="polite"></span>
                     </label>
                     <br>
                     <label for="achternaam">
-                        <input class="formItem" type="achternaam" placeholder="achternaam" name="achternaam" id="centration" required minlength="3" size="37">
+                        <input class="formItem" type="achternaam" placeholder="achternaam" name="achternaam" id="achternaam" required minlength="3" size="37">
                         <span class="error" aria-live="polite"></span>
                     </label>
                     <br>
                     <label for="email">
-                        <input class="formItem" placeholder="Email-adress" type="email" name="email" id="centration" required minlength="8" size="37">
+                        <input class="formItem" placeholder="Email-adress" type="email" name="email" id="email" required minlength="8" size="37">
                         <span class="error" aria-live="polite"></span>
                     </label>
                     <br>
@@ -41,7 +42,7 @@
                     <br>
                     <label for="messageBody">
                         <input class="formItem" type="messageBody" name="messageBody" id="centration" required
-                            pattern="^\d{2}-\d{8}$" placeholder="Vul hier Uw bericht in" size="37">
+                             placeholder="Vul hier Uw bericht in" size="37" height="27">
                         <span class="error" aria-live="polite"></span>
                     </label>
                     <br>
