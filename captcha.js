@@ -28,9 +28,12 @@ function onSubmit(e) {
                         'Content-Type': 'application/json'
                     }
                 });
+                alert("Contactverzoek verstuurd!");
+                form.reset();
             }
             catch (e) {
-                console.log('Het verzenden van de captcha is mislukt: ' + e.message)
+                console.log('Het verzenden van de captcha is mislukt: ' + e.message);
+                alert('Het verzenden van de captcha is mislukt: ' + e.message);
             }
         });
     });

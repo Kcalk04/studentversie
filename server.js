@@ -26,20 +26,43 @@ app.post('/send-email', async (req, res) => {
     // Verstuur de gegevens naar de Google Api
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex = /^\d{2}-\d{8}$/;
     try {
         const { voornaam, achternaam, email, phoneNumber, subject, messageBody } = req.body;
-        debugger;
+        if(voornaam && voornaam.length > 60) {
+            res.send("voornaam is langer dan 60 karakters");
+            console.log("voornaam moet minder dan 200 karakters bevatten");
+            alert("voornaam moet minder dan 200 karakters bevatten");
+            return;
+        };
+        if(achternaam && achternaam.length > 60) {
+            res.send("achternaam is langer dan 60 karakters");
+            console.log("achternaam moet minder dan 60 karakters bevatten");
+            alert("achternaam moet minder dan 60 karakters bevatten");
+            return;
+        }
+        if(phoneNumber && phoneNumber.length > 20 && !phoneRegex.test(phoneNumber)) {
+            res.send("telefoonnummer is langer dan 20 karakters");
+            console.log("telefoonmummer moet minder dan 20 karakters bevatten");
+            alert("telefoonnummer moet minder dan 20 karakters bevatten en en valide nummer zijn. (notatie: 00-00000000)");
+            return;
+        }
         if(subject && subject.length > 200) {
             res.send("Onderwerp is langer dan 200 karakters");
             console.log("Onderwerpt moet minder dan 200 karakters bevatten");
+            alert("Onderwerpt moet minder dan 200 karakters bevatten");
             return;
-        } else if (messageBody && messageBody.length > 600) {
+        }
+        if (messageBody && messageBody.length > 600) {
             res.send("Bericht is langer dan 600 karakters");
             console.log("Uw bericht mag niet langer 600 karakters zijn");
+            alert("Uw bericht mag niet langer 600 karakters zijn");
             return;
-        } else if (email && !(emailRegex.test(email))){
+        }
+        if (email && !(emailRegex.test(email) && email.length > 80)){
             res.send("Email is niet geldig");
             console.log("Zorg dat dit een vailde email is");
+            alert("Zorg dat dit een vailde email is");
             return;
         }
         const response = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`, {
