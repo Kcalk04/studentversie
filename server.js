@@ -31,12 +31,15 @@ app.post('/send-email', async (req, res) => {
         debugger;
         if(subject && subject.length > 200) {
             res.send("Onderwerp is langer dan 200 karakters");
+            console.log("Onderwerpt moet minder dan 200 karakters bevatten");
             return;
         } else if (messageBody && messageBody.length > 600) {
             res.send("Bericht is langer dan 600 karakters");
+            console.log("Uw bericht mag niet langer 600 karakters zijn");
             return;
         } else if (email && !(emailRegex.test(email))){
             res.send("Email is niet geldig");
+            console.log("Zorg dat dit een vailde email is");
             return;
         }
         const response = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`, {

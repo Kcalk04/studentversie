@@ -9,9 +9,6 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6LfHg4ApAAAAAGPJBCsxEPiZaIpSx3Ziewqv-13j" async defer></script>
     <script defer src="captcha.js"></script>
     <script defer src="app.js"></script>
-    <script>function resetForm() {
-        document.getElementById("submit").reset;
-    } </script>
 </head>
 
 <body>
@@ -55,8 +52,7 @@
 
                     </label>
                     <br>
-                    <!-- <div class="g-recaptcha" data-sitekey="6LcbzIApAAAAAPBo7jQGjcSwzWw5_iOZHTsicZG_"></div> -->
-                    <input class="buttonMargin" onclick="resetForm()" type="submit" value="Verstuur!">
+                    <input class="buttonMargin" id="submit" type="submit" value="Verstuur!">
                 </div>
             </form>
         </div>
